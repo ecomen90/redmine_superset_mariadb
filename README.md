@@ -95,8 +95,11 @@ Step 3: Superset 초기화 (First Run)
 컨테이너가 실행된 후 다음 명령어를 순차적으로 실행하여 관리자 계정을 생성합니다.
 bash
 docker exec -it superset-app superset fab create-admin --username admin --firstname admin --lastname admin --email admin@example.com --password admin
+
 docker exec -it superset-app superset db upgrade
+
 docker exec -it superset-app superset init
+
 코드를 사용할 때는 주의가 필요합니다.
 
 Step 4: DBeaver 연결 (192.168.0. 대역)*
